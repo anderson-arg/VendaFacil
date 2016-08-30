@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 			flash[:success] = t(:user)+" "+t(:message_success_register)
 			redirect_to '/'
 		elsif 
-			flash[:error] = t(:message_error_empty_fields)
+			flash[:danger] = t(:message_error_empty_fields)
 			redirect_to '/users/new'
 		end
 	end

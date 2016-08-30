@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
 				format.js
 			end
 		elsif 
-			flash[:error] = t(:message_error_empty_fields)
+			flash[:danger] = t(:message_error_empty_fields)
 			respond_to do |format|
 				format.html{redirect_to '/products/new'}
 				format.js
