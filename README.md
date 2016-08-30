@@ -2,8 +2,7 @@
 
 ## Descrição do Projeto
 
-Como todos sabem, a internet vem, a cada dia, ganhando mais espaço dentro da nossa sociedade. Nesse contexto, aplicações envolvendo vendas de produtos, anúncios de viagens e redes sociais são diariamente criadas tentando gerar o que o usuári
-o comum precisa. Nosso sistema proporciona ao usuario um espaço global de anúncios de vendas de produtos. Onde um usuário poderá cadastrar seu produto para que um outro usuário possa vê-lo.  Dessa forma, facilitamos a vida de 
+Como todos sabem, a internet vem, a cada dia, ganhando mais espaço dentro da nossa sociedade. Nesse contexto, aplicações envolvendo vendas de produtos, anúncios de viagens e redes sociais são diariamente criadas tentando gerar o que o usuário comum precisa. Nosso sistema proporciona ao usuario um espaço global de anúncios de vendas de produtos. Onde um usuário poderá cadastrar seu produto para que um outro usuário possa vê-lo.  Dessa forma, facilitamos a vida de 
 quem quer comprar um carro, um celular,um imóvel, etc. De modo que, mesmo não agindo diretamente como parte atuante na negociação, facilitaremos a troca de informações entre os interessados. 
 
 #Requisitos
@@ -28,7 +27,7 @@ Para instalar o projeto em sua maquina, a fim de altera-lo e/ou estuda-lo, siga 
 - Em seguita, crie o banco. Para isso, execute o comando rake db:create
 - Com o banco criado, execute a migracao: rake db:migrate
 - Para popular o banco com dados pre-estabelecidos no arquivo seeds do projeto, execute o comando rake db:seeds
-- Agora vamos instalar a gem imagemagick, para isso, execute o comando: sudo apt-get intall imagemagick, caso esteja usando linux, ou brew install imagemagick caso esteja usando mac os.
+- Agora vamos instalar a gem imagemagick, para isso, execute o comando: sudo apt-get install imagemagick, caso esteja usando linux, ou brew install imagemagick caso esteja usando mac os.
 - Por fim, basta rodar o servidor. Para isso, execute o comando rails -s. Para acessar, copie a url localhost:3000 no seu browser
 
 #Getting Started
