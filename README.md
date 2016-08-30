@@ -1,24 +1,18 @@
-# README
+# List.it
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Descrição
 
-Things you may want to cover:
+O projeto consiste em um sistema web para anúncio de produtos a fim de facilitar a vida de compradores e vendedores.
 
-* Ruby version
+Entrega 1: Cadastro de produtos, de usuário, Layout com bootstrap e Login 
+Entrega 2: Internacionalização, session,
 
-* System dependencies
+## Configuração
 
-* Configuration
+Tecnologia: Ruby on Rails.
+Versionamento: Github.
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Equipe
+* Fellipe Freire
+* Anderson Araújo
