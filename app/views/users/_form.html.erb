@@ -1,0 +1,38 @@
+<%= form_for @user, :html => { :class => "form-horizontal user" } do |f| %>
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label :email, :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.text_field :email, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label :password, :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.password_field :password, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group" style="margin-left:10px;">
+    <div class="col-lg-1">
+      <%= f.submit t('register'), :class => 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+
+<% end %>

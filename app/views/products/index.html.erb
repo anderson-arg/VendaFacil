@@ -1,0 +1,33 @@
+<div class="row">
+	<%= form_tag(products_path, :method => :get) do |f| %>
+		<div style="margin-top:5px;" class="col-lg-1">
+			<b><%= t('filter_by') %></b>
+		</div>
+		<div class="col-lg-3">
+		  <%= collection_select(:category, :category_id, @categories, :id, :name, {include_blank: true}, {:class => 'form-control'}) %>
+		</div>
+		<div class="col-lg-2">
+		  <%= text_field_tag 'name', nil, :class => 'form-control', placeholder: "#{t('name')} #{t('of')} #{t('product')}" %>
+		</div>
+		<div class="col-lg-2">
+			<%= submit_tag t('search'), :class => 'btn btn-primary' %>
+		</div>
+	<%end%>
+</div>
+
+<table class="table table-striped">
+	<caption><%= t('all') %> <%= @products.size %></caption>
+	<th><%= t('image') %></th>
+	<th><%= t('name') %> <%=t('of')%> <%= t('product') %></th>
+	<th><%= t('value') %></th>
+	<th><%= t('_date') %> <%=t('gives')%> <%= t('publication') %></th>
+	<% @products.each do |p| %>
+		<tr>
+			<td><%= image_tag p.avatar.url(:thumb) %></td>
+			<td><%= link_to p.name, products_show_path(p.id) %></td>
+			<td><%= p.value %></td>
+			<td><%= l(p.created_at) %></td>
+		</tr>
+	<%end%>
+</table>
+<%= will_paginate @products %>

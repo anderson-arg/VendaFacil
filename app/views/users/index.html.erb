@@ -1,0 +1,28 @@
+<div class="row page-header">
+  <h1><%=t('my_')%> <%=t('products')%> </h1>
+</div>
+
+<table class="table table-striped">
+	<caption><%= t('all') %> <%= @products.size %></caption>
+	<th><%= t('image') %></th>
+	<th><%= t('name') %> <%=t('of')%> <%= t('product') %></th>
+	<th><%= t('description') %></th>
+	<th><%= t('value') %></th>
+	<th><%= t('_date') %> <%=t('gives')%> <%= t('publication') %></th>
+	<th><%= t('action') %></th>
+	<% @products.each do |p| %>
+		<tr id="product_<%= p.id %>">
+			<td><%= image_tag p.avatar.url(:thumb) %></td>
+			<td><%= p.name%></td>
+			<td><%= p.description %></td>
+			<td><%= p.value %></td>
+			<td><%= l(p.created_at) %></td>
+			<td>
+				<%= link_to t('delete'), products_destroy_path(p.id), 
+					method: "delete", remote: true, id: "remove_product_#{p.id}" 
+				%>		
+			</td>
+		</tr>
+	<%end%>
+</table>
+<%= will_paginate @products %>

@@ -1,0 +1,57 @@
+<%= form_for @product, url: products_path, :html => { multipart: true, :class => "form-horizontal product" } do |f| %> 
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label t('image'), :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.file_field :avatar, :title => "Sele" %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label t('category'), :class => 'control-label col-lg-1' %>
+    <div class="col-lg-3">
+      <%= f.collection_select(:category_id, @categories, :id, :name, {include_blank: true}, {:class => 'form-control'}) %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label :value, :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.number_field :value, min: 0, max: 9999999999999, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.text_area :description, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group" style="margin-left:10px;">
+    <div class="col-lg-1">
+      <%= f.submit t('register'), :class => 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+
+<% end %>

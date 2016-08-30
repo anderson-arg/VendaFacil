@@ -1,0 +1,30 @@
+<div class="row page-header">
+  <h1><%=@product.name%></h1>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <%= image_tag @product.avatar.url(:medium) %>
+  </div>
+  <div class="form-group col-lg-6">
+    <div>
+      <b><%= t('value') %>:</b> <%= @product.value %>
+    </div>
+
+    <div style="margin-top:10px;">
+      <b><%= t('description') %>:</b> <%= @product.description %>
+    </div>
+  </div>
+</div>
+
+<div class="row page-header">
+  <h1><%= t('contact') %></h1>
+</div>
+
+<div class="row">
+  <div>
+    <b><%= t('email') %>:</b> <%= @product.user.email%>
+  </div>
+</div>
+
+

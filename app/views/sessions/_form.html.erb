@@ -1,0 +1,29 @@
+<%= form_for :session, url: sessions_login_path , :html => { :class => "form-horizontal session" } do |f| %>
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label t('name'), :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group">
+    <%= f.label t('password'), :class => 'control-label col-lg-1' %>
+    <div class="col-lg-2">
+      <%= f.password_field :password, :class => 'form-control' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group" style="margin-left:10px;">
+    <div class="col-lg-1">
+      <%= f.submit t('login'), :class => 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+
+<% end %>

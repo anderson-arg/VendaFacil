@@ -1,0 +1,30 @@
+"pt-BR":
+  activerecord:
+    models:
+      user: Usuário
+      category: Categoria
+      product: Produto
+    attributes:
+      user:
+        id: "Identificador"
+        name: "Nome"
+        email: "Email"
+        password: "Senha"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      category:
+        id: "Identificador"
+        name: "Nome"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      product:
+        id: "Identificador"
+        user_id: "Identificador do Usuário"
+        category_id: "Identificador da Categoria"
+        avatar: "Imagem"
+        name: "Nome"
+        description: "Descrição"
+        value: "Valor"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      
