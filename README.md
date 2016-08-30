@@ -19,6 +19,17 @@ quem quer comprar um carro, um celular,um imóvel, etc. De modo que, mesmo não 
 - Exibir detalhes do produto
 
 #Processo de Instalacao
+Para instalar o projeto em sua maquina, a fim de altera-lo e/ou estuda-lo, siga os seguintes passos:
+- Abra o prompt de comando
+- Escolha um local onde deseja que seu projeto seja baixado
+- Em seguida, execute o comando git clone com a seguinte url: https://github.com/anderson-arg/VendaFacil
+- Feito isso, a pasta do projeto ja tera sido baixada na sua maquina, entre nela
+- Ja estando no diretorio do projeto, execute o comando bundle install
+- Em seguita, crie o banco. Para isso, execute o comando rake db:create
+- Com o banco criado, execute a migracao: rake db:migrate
+- Para popular o banco com dados pre-estabelecidos no arquivo seeds do projeto, execute o comando rake db:seeds
+- Agora vamos instalar a gem imagemagick, para isso, execute o comando: sudo apt-get intall imagemagick, caso esteja usando linux, ou brew install imagemagick caso esteja usando mac os.
+- Por fim, basta rodar o servidor. Para isso, execute o comando rails -s. Para acessar, copie a url localhost:3000 no seu browser
 
 #Getting Started
 Como ponto de partida, o usuario devera fazer cadastro no sistema. De modo que a partir do momento que o tenha feito, sera possivel fazer login no sistema. Feito o login, o usuario estara apto a cadastrar produtos. Com os produtos ja cadastrados, o usuario podera excluir ou editar seus produtos. Nesse caso, o usuario logado so podera fazer isso com os produtos por ele cadastrados. Por fim, os produtos cadastrados serao exibidos na pagina inicial do sistema, para qualquer pessoa que acesse o site. Mesmo que nao se cadastre no sistema, o interessado podera ver os anuncios em detalhes, filtrar a listagem por categoria e buscar produto por nome.
