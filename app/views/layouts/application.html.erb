@@ -62,6 +62,7 @@
             <%elsif%>
               <li style="margin-top:15px;"><%= t('welcome') %> <%= current_user.name %></li>
               <li><%= link_to t('logout'), sessions_logout_path, method: "delete"  %></li>
+              <li style="margin-top:15px;"><%=cookies[:locale]%></li>
             <%end%>
           </ul>
         </div>

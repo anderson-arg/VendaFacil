@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
 	before_action :set_category, only: [:index, :new, :create, :edit, :update]
 	before_action :require_user, except: [:index]
 
+	before_action :set_locale
+
 	def index
 		@categories = Category.all
 		if params[:category] != nil && params[:category]['category_id'] != "" && params[:name] != ""
